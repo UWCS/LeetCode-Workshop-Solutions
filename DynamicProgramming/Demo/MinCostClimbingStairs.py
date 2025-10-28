@@ -1,5 +1,6 @@
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
+        # OPT[i] = cost[i] + min(OPT[i+1], OPT[i+2])
         opt = [None] * (len(cost) + 1)
 
         opt[-1] = 0
